@@ -55,19 +55,19 @@ export default function Home() {
                 <div className="space-y-2">
                   <div className="bg-card border border-primary rounded-lg p-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-primary font-medium">7-8 August 2025</span>
+                      <span className="text-primary font-medium">7-8 August 2025 (Weekdays)</span>
                       <span className="text-xs bg-success text-success-foreground px-2 py-1 rounded">Available</span>
                     </div>
                   </div>
                   <div className="bg-card border border-border rounded-lg p-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-muted-foreground font-medium">9-10 August 2025</span>
+                      <span className="text-muted-foreground font-medium">9-10 August 2025 (Weekend)</span>
                       <span className="text-xs bg-warning text-warning-foreground px-2 py-1 rounded">Few Slots</span>
                     </div>
                   </div>
                   <div className="bg-card border border-border rounded-lg p-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-muted-foreground font-medium">8-9 September 2025</span>
+                      <span className="text-muted-foreground font-medium">8-9 September 2025 (Weekdays)</span>
                       <span className="text-xs bg-success text-success-foreground px-2 py-1 rounded">Available</span>
                     </div>
                   </div>
@@ -280,6 +280,117 @@ export default function Home() {
                 </svg>
                 Download Workshop Brochure
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What You'll Build Section */}
+      <section className="py-16 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              What You&apos;ll Build
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+              Go beyond theory. Create real applications that showcase your AI skills and build your portfolio with production-ready projects.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Web Application */}
+            <div className="bg-card border border-border rounded-lg p-6 text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-card-foreground mb-3">AI-Powered Web Application</h3>
+              <p className="text-muted-foreground mb-4">
+                Build a complete responsive web app with AI chatbot integration, user authentication, and real-time data processing using Next.js and modern APIs.
+              </p>
+              <div className="text-sm text-primary font-medium">
+                Technologies: React, Next.js, OpenAI API, Supabase
+              </div>
+            </div>
+
+            {/* Google Plugin & Extension */}
+            <div className="bg-card border border-border rounded-lg p-6 text-center">
+              <div className="w-16 h-16 bg-secondary/10 rounded-lg flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-card-foreground mb-3">Google Plugin & Extension</h3>
+              <p className="text-muted-foreground mb-4">
+                Create a Chrome extension and Google Workspace add-on that leverages AI for productivity enhancement, document analysis, and automated workflows.
+              </p>
+              <div className="text-sm text-secondary font-medium">
+                Technologies: Chrome APIs, Google Apps Script, Manifest V3
+              </div>
+            </div>
+
+            {/* Mobile Application */}
+            <div className="bg-card border border-border rounded-lg p-6 text-center">
+              <div className="w-16 h-16 bg-success/10 rounded-lg flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-success" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zM6 4a1 1 0 011-1h6a1 1 0 011 1v10a1 1 0 01-1 1H7a1 1 0 01-1-1V4zm4 12a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-card-foreground mb-3">AI Mobile Application</h3>
+              <p className="text-muted-foreground mb-4">
+                Develop a cross-platform mobile app with AI image recognition, voice processing, and smart recommendations using React Native and cloud AI services.
+              </p>
+              <div className="text-sm text-success font-medium">
+                Technologies: React Native, Expo, AI APIs, Firebase
+              </div>
+            </div>
+          </div>
+
+          {/* 3 Months Support Program */}
+          <div className="text-center mt-12">
+            <div className="bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 rounded-lg p-8 max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                🚀 3-Month Post-Workshop Support Program
+              </h3>
+              <p className="text-muted-foreground text-lg mb-6">
+                Your learning doesn&apos;t end after the workshop. Get continued guidance to ensure your success.
+              </p>
+              <div className="grid md:grid-cols-3 gap-6 text-left">
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-3 mt-1">
+                    <svg className="w-4 h-4 text-primary-foreground" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-card-foreground mb-1">Technical Mentoring</h4>
+                    <p className="text-sm text-muted-foreground">Weekly 1-on-1 sessions with expert trainers</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-secondary rounded-full flex items-center justify-center mr-3 mt-1">
+                    <svg className="w-4 h-4 text-secondary-foreground" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-card-foreground mb-1">Project Reviews</h4>
+                    <p className="text-sm text-muted-foreground">Code reviews and deployment assistance</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-success rounded-full flex items-center justify-center mr-3 mt-1">
+                    <svg className="w-4 h-4 text-success-foreground" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-card-foreground mb-1">Career Guidance</h4>
+                    <p className="text-sm text-muted-foreground">Job placement support and portfolio building</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -542,7 +653,7 @@ export default function Home() {
                   Is this workshop eligible for HRDF claims?
                 </h3>
                 <p className="text-muted-foreground">
-                  Yes! This workshop is HRDF claimable up to RM 1,000. We&apos;ll provide all necessary documentation for your claim submission. Most participants get their full workshop fee reimbursed.
+                  Yes! This workshop is HRDF claimable up to RM 2,500. We&apos;ll provide all necessary documentation for your claim submission. Most participants get their workshop fee substantially reimbursed.
                 </p>
               </div>
 
@@ -588,13 +699,26 @@ export default function Home() {
               Investment in Your Future
             </h2>
             <div className="bg-gradient-to-r from-primary to-secondary border border-border rounded-lg p-8 text-center">
-              <div className="text-4xl font-bold text-primary-foreground mb-2">RM 1,200</div>
-              <p className="text-primary-foreground/80 mb-4">2-Day Intensive Workshop</p>
-              <div className="bg-success text-success-foreground px-4 py-2 rounded-full inline-block mb-4">
-                💰 HRDF Claimable up to RM 1,000
+              <div className="text-4xl font-bold text-primary-foreground mb-2">RM 2,900</div>
+              <p className="text-primary-foreground/80 mb-4">2-Day Intensive Workshop + 3-Month Support</p>
+              
+              {/* HRDF Section with Logo */}
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <div className="bg-white rounded-lg p-2">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdxUfDsSWxXrDYvrhYiCZoihiCc0l3x1hj4g&s"
+                    alt="HRDF Claimable"
+                    className="h-8 w-auto object-contain"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="bg-success text-success-foreground px-4 py-2 rounded-full">
+                  💰 HRDF Claimable up to RM 2,500
+                </div>
               </div>
+              
               <p className="text-primary-foreground/70 text-sm">
-                Includes materials, lunch, and lifetime access to course resources
+                Includes materials, lunch, lifetime access to resources, and 3-month mentoring program
               </p>
             </div>
           </div>
