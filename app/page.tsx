@@ -1,11 +1,15 @@
 import WorkshopRegistrationForm from '@/components/SubscriptionForm';
 import { ThemeToggle } from '@/components/ThemeToggle';
+import { WhatsAppButton } from '@/components/WhatsAppButton';
 
 export default function Home() {
   return (
     <main className="bg-background min-h-screen">
       {/* Theme Toggle Button */}
       <ThemeToggle />
+      
+      {/* WhatsApp Button */}
+      <WhatsAppButton />
       
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center">
@@ -51,19 +55,19 @@ export default function Home() {
                 <div className="space-y-2">
                   <div className="bg-card border border-primary rounded-lg p-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-primary font-medium">March 23-24, 2024</span>
+                      <span className="text-primary font-medium">7-8 August 2025</span>
                       <span className="text-xs bg-success text-success-foreground px-2 py-1 rounded">Available</span>
                     </div>
                   </div>
                   <div className="bg-card border border-border rounded-lg p-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-muted-foreground font-medium">April 20-21, 2024</span>
+                      <span className="text-muted-foreground font-medium">9-10 August 2025</span>
                       <span className="text-xs bg-warning text-warning-foreground px-2 py-1 rounded">Few Slots</span>
                     </div>
                   </div>
                   <div className="bg-card border border-border rounded-lg p-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-muted-foreground font-medium">May 18-19, 2024</span>
+                      <span className="text-muted-foreground font-medium">8-9 September 2025</span>
                       <span className="text-xs bg-success text-success-foreground px-2 py-1 rounded">Available</span>
                     </div>
                   </div>

@@ -26,8 +26,9 @@ export default function WorkshopRegistrationForm() {
     !process.env.NEXT_PUBLIC_SUPABASE_URL;
 
   const workshopDates = [
-    { id: 'march-23-24', label: 'March 23-24, 2024 (Weekend)', available: true, slots: 'Available' },
-    { id: 'april-13-14', label: 'April 13-14, 2024 (Weekend)', available: true, slots: '3 slots left' }
+    { id: 'august-7-8', label: '7-8 August 2025 (Weekend)', available: true, slots: 'Available' },
+    { id: 'august-9-10', label: '9-10 August 2025 (Weekend)', available: true, slots: 'Few slots left' },
+    { id: 'september-8-9', label: '8-9 September 2025 (Weekend)', available: true, slots: 'Available' }
   ];
 
   const experienceLevels = [
