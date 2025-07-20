@@ -1,12 +1,52 @@
 import WorkshopRegistrationForm from '@/components/SubscriptionForm';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
+import Link from 'next/link';
 
 export default function Home() {
   return (
     <main className="bg-background min-h-screen">
       {/* Theme Toggle Button */}
       <ThemeToggle />
+      
+      {/* Navigation */}
+      <nav className="relative z-40 py-4 bg-background/80 backdrop-blur-sm border-b border-border">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                <span className="text-primary-foreground font-bold text-lg">AI</span>
+              </div>
+              <span className="font-bold text-xl text-foreground">Academy</span>
+            </Link>
+            
+            <div className="hidden md:flex items-center space-x-8">
+              <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">
+                Home
+              </Link>
+              <Link href="/courses" className="text-muted-foreground hover:text-foreground transition-colors">
+                Courses
+              </Link>
+              <Link href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
+                About
+              </Link>
+              <Link href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
+                Contact
+              </Link>
+              <Link href="/courses" className="bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors font-medium">
+                View All Courses
+              </Link>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden">
+              <Link href="/courses" className="bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium">
+                Courses
+              </Link>
+            </div>
+          </div>
+        </div>
+      </nav>
       
       {/* WhatsApp Button */}
       <WhatsAppButton />
