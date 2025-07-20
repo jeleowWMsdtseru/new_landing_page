@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Join our hands-on AI Vibe Coding workshop. Learn to build and launch 4-5 production-ready web and mobile apps. Master UI/UX, backends, payment gateways, and more.">
+  <meta name="keywords" content="AI Vibe Coding, learn to code, web development workshop, mobile app development, full-stack bootcamp, React, Git, product management for developers">
+  <meta name="author" content="theLead.io">
+  <title>AI Vibe Coding Workshop | Build & Launch Real-World Apps</title>
+  
+  <!-- Favicons -->
+  <link rel="icon" href="https://thelead.io/wp-content/uploads/2020/04/cropped-lead-favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" href="https://thelead.io/wp-content/uploads/2020/04/cropped-lead-favicon-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="https://thelead.io/wp-content/uploads/2020/04/cropped-lead-favicon-192x192.png" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom styles to apply the Inter font and other enhancements */
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-color: #f9fafb; /* bg-gray-50 */
+    }
+    .card-hover {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+    /* Style for the sticky nav to avoid content jump */
+    .sticky-nav-padding {
+        padding-top: 72px; /* Adjust this based on nav height */
+    }
+    /* Custom gradient for yellow accent */
+    .bg-gradient-yellow {
+        background-image: linear-gradient(to right, var(--tw-gradient-stops));
+        --tw-gradient-from: #f59e0b; /* amber-500 */
+        --tw-gradient-to: #facc15;   /* yellow-400 */
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+    /* Header background with a yellow overlay */
+    .header-bg {
+        /* Using a yellow gradient overlay. RGB for yellow-400 (250, 204, 21) and amber-500 (245, 158, 11) */
+        background-image: linear-gradient(to right, rgba(250, 204, 21, 0.9), rgba(245, 158, 11, 0.9)), url('https://images.unsplash.com/photo-1550439062-609e1531270e?q=80&w=2070&auto=format&fit=crop');
+        background-size: cover;
+        background-position: center;
+    }
+    /* Accordion styles */
+    .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navigation Bar -->
+  <nav id="navbar" class="bg-gray-900/80 backdrop-blur-md text-white fixed top-0 left-0 right-0 z-50 shadow-lg">
+    <div class="container mx-auto px-6">
+        <div class="flex justify-between items-center h-16">
+            <a href="https://www.thelead.io" target="_blank" rel="noopener noreferrer">
+              <img src="https://thelead.io/wp-content/uploads/2019/11/lead-white-logo.png" alt="theLead.io Logo" class="h-8 w-auto">
+            </a>
+
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#dates" class="hover:text-amber-300 transition-colors">Dates</a>
+                <a href="#syllabus" class="hover:text-amber-300 transition-colors">Syllabus</a>
+                <a href="#outcomes" class="hover:text-amber-300 transition-colors">Outcomes</a>
+                <a href="#trainers" class="hover:text-amber-300 transition-colors">Trainers</a>
+                <a href="#faq" class="hover:text-amber-300 transition-colors">FAQ</a>
+                <a href="https://forms.gle/PN7R1p8C5YD6sWABA" target="_blank" rel="noopener noreferrer" class="bg-amber-500 hover:bg-amber-600 text-gray-900 px-4 py-2 rounded-md font-semibold transition-all">Register Now</a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+        <a href="#dates" class="block hover:text-amber-300 transition-colors py-2">Dates</a>
+        <a href="#syllabus" class="block hover:text-amber-300 transition-colors py-2">Syllabus</a>
+        <a href="#outcomes" class="block hover:text-amber-300 transition-colors py-2">Outcomes</a>
+        <a href="#trainers" class="block hover:text-amber-300 transition-colors py-2">Trainers</a>
+        <a href="#faq" class="block hover:text-amber-300 transition-colors py-2">FAQ</a>
+        <a href="https://forms.gle/PN7R1p8C5YD6sWABA" target="_blank" rel="noopener noreferrer" class="block bg-amber-500 hover:bg-amber-600 text-gray-900 px-4 py-2 rounded-md font-semibold transition-all text-center mt-2">Register Now</a>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
+  <header class="header-bg text-gray-900 pt-32 pb-20 md:pt-40 md:pb-28 border-b-8 border-amber-600">
+    <div class="container mx-auto px-6 text-center relative z-10">
+      <h1 class="text-4xl md:text-6xl font-black leading-tight mb-4">
+        AI Vibe Coding Workshop
+      </h1>
+      <p class="text-lg md:text-xl text-gray-800 max-w-3xl mx-auto mb-8">
+        Go from idea to live application. Build 4-5 web and mobile apps with best practices in UI/UX, backends, and payment gateways. We cover security, debugging, and version control to make your projects production-ready.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://forms.gle/PN7R1p8C5YD6sWABA" target="_blank" rel="noopener noreferrer" class="inline-block w-full sm:w-auto bg-gray-900 text-white font-bold text-lg px-10 py-4 rounded-lg shadow-lg hover:bg-gray-800 transition-all transform hover:scale-105">
+          Book Your Seat Now
+        </a>
+        <a href="https://drive.google.com/file/d/1xQZhIFpf4SJxRF02jeM_D4u-lGGpTbsx/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block w-full sm:w-auto bg-transparent border-2 border-gray-900 text-gray-900 font-bold text-lg px-10 py-3 rounded-lg shadow-lg hover:bg-gray-900 hover:text-white transition-all transform hover:scale-105">
+          Download Brochure
+        </a>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Trusted By Section -->
+  <section id="trusted-by" class="bg-gray-100 py-12">
+      <div class="container mx-auto px-6">
+          <h3 class="text-center text-gray-600 text-sm font-bold uppercase tracking-wider mb-8">Trusted by industry leaders</h3>
+          <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 md:gap-x-12">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQku905qBjCQ5SDj3lZve75sRjQcKTmpersqg&s" alt="Johor Corp Logo" class="h-8 md:h-10 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
+              <img src="https://cdn.brandfetch.io/idYJaweP2l/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1746558728078" alt="Ecoworld Logo" class="h-8 md:h-10 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
+              <img src="https://cdn.brandfetch.io/idBvD8kBit/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667603006186" alt="Shell Logo" class="h-8 md:h-10 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/MDEC_logo.png" alt="MDEC Logo" class="h-8 md:h-10 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
+              <img src="https://cdn.brandfetch.io/idseuM-L0r/w/1000/h/1000/theme/dark/logo.png?c=1bxid64Mup7aczewSAYMX&t=1745066255275" alt="Tune Talk Logo" class="h-8 md:h-10 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
+              <img src="https://learn.taxpod.my/images/favicon/favicon60c22d97859be.png" alt="YYC Logo" class="h-8 md:h-10 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Sunway_logo.png" alt="Sunway Logo" class="h-8 md:h-10 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all" onerror="this.style.display='none'">
+          </div>
+      </div>
+    </section>
+
+  <!-- Main Content -->
+  <main class="bg-gray-50">
+    <div class="container mx-auto px-6 py-12 md:py-20">
+
+      <!-- Dates Section -->
+      <section id="dates" class="mb-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Choose Your Workshop Date</h2>
+            <p class="text-gray-600 mt-2">Seats are filling up fast! Book now to secure your spot.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Date Card 1: July -->
+            <div class="bg-white p-6 rounded-xl shadow-lg border-2 border-amber-400 transform hover:scale-105 transition-transform duration-300">
+                <div class="text-center">
+                    <p class="text-lg font-semibold text-gray-500">July 19-20, 2025</p>
+                    <p class="font-bold text-2xl text-gray-800 mb-4">Saturday & Sunday</p>
+                    
+                    <!-- Progress Bar -->
+                    <div class="w-full bg-gray-200 rounded-full h-4 mb-2">
+                        <div class="bg-red-500 h-4 rounded-full" style="width: 95%"></div>
+                    </div>
+                    <div class="flex justify-between items-center text-sm mb-4">
+                        <p class="font-bold text-red-600 flex items-center"><i data-lucide="flame" class="w-4 h-4 mr-1"></i>95% Sold Out!</p>
+                        <p class="text-gray-500">Only a few slots left!</p>
+                    </div>
+
+                    <a href="https://forms.gle/PN7R1p8C5YD6sWABA" target="_blank" rel="noopener noreferrer" class="inline-block w-full bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-3 px-6 rounded-lg shadow-md transition-all">
+                        Book Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- Date Card 2: September -->
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 transform hover:scale-105 transition-transform duration-300">
+                <div class="text-center">
+                    <p class="text-lg font-semibold text-gray-500">September 20-21, 2025</p>
+                    <p class="font-bold text-2xl text-gray-800 mb-4">Saturday & Sunday</p>
+                    
+                    <!-- Progress Bar -->
+                    <div class="w-full bg-gray-200 rounded-full h-4 mb-2">
+                        <div class="bg-green-500 h-4 rounded-full" style="width: 15%"></div>
+                    </div>
+                    <div class="flex justify-between items-center text-sm mb-4">
+                        <p class="font-bold text-green-600">15% Sold Out</p>
+                        <p class="text-gray-500">Slots available</p>
+                    </div>
+
+                    <a href="https://forms.gle/PN7R1p8C5YD6sWABA" target="_blank" rel="noopener noreferrer" class="inline-block w-full bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-3 px-6 rounded-lg shadow-md transition-all">
+                        Book Now
+                    </a>
+                </div>
+            </div>
+        </div>
+      </section>
+    
+      <div class="grid lg:grid-cols-3 gap-12">
+        <div class="lg:col-span-2 space-y-12">
+
+          <!-- Who Should Attend Section -->
+          <section id="who-should-attend" class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 card-hover">
+             <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-2xl font-bold mb-6 flex items-center"><i data-lucide="users" class="w-7 h-7 mr-3 text-amber-500"></i>Who Should Attend</h2>
+                    <p class="mb-4 text-gray-600">This course is perfect for ambitious builders and innovators:</p>
+                    <ul class="space-y-3">
+                      <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-green-500 mt-1 flex-shrink-0"></i><span><strong>Aspiring Developers</strong> wanting to build a production-ready portfolio.</span></li>
+                      <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-green-500 mt-1 flex-shrink-0"></i><span><strong>Entrepreneurs & Founders</strong> who want to build their own MVP.</span></li>
+                      <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-green-500 mt-1 flex-shrink-0"></i><span><strong>Product Managers & Designers</strong> looking to understand the tech side.</span></li>
+                      <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-green-500 mt-1 flex-shrink-0"></i><span><strong>Career Changers</strong> ready to dive into the world of tech and development.</span></li>
+                    </ul>
+                </div>
+                <div class="hidden md:block">
+                    <img src="https://thelead.io/wp-content/uploads/2020/07/Web-development-illustration-1march-july-06.png" alt="Web Development Illustration" class="rounded-lg object-cover h-full w-full">
+                </div>
+             </div>
+          </section>
+
+          <!-- Syllabus Section -->
+          <section id="syllabus" class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 card-hover">
+              <h2 class="text-2xl font-bold mb-6 flex items-center"><i data-lucide="book-open-check" class="w-7 h-7 mr-3 text-amber-500"></i>Syllabus Overview</h2>
+              <div class="space-y-6">
+                  <div class="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-lg">
+                      <h3 class="font-bold text-lg text-amber-800 mb-2">Day 1: Foundations & Frontend Magic</h3>
+                      <ul class="list-disc list-inside text-gray-700 space-y-2">
+                          <li><strong>Product Management Essentials:</strong> From idea to PRD (Product Requirements Document).</li>
+                          <li><strong>UI/UX Best Practices:</strong> Designing user-centric interfaces with Figma.</li>
+                          <li><strong>Version Control with Git:</strong> Mastering branching, commits, and pushing to GitHub.</li>
+                          <li><strong>Vibe Coding Example #1:</strong> Build a landing page with checkout & an integrated AI chatbot.</li>
+                          <li><strong>Vibe Coding Example #2:</strong> Develop a functional Google Chrome plugin from scratch.</li>
+                      </ul>
+                  </div>
+                  <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg">
+                      <h3 class="font-bold text-lg text-green-800 mb-2">Day 2: Backend, Deployment & Going Live</h3>
+                      <ul class="list-disc list-inside text-gray-700 space-y-2">
+                          <li><strong>Backend & Database Integration:</strong> Connecting your app to serverless functions and databases.</li>
+                          <li><strong>Live Deployment:</strong> Pushing your projects live with proper hosting on Vercel/Netlify.</li>
+                           <li><strong>Vibe Coding Example #3:</strong> Create a cross-platform mobile app for iOS and Android.</li>
+                          <li><strong>Vibe Coding Example #4:</strong> Build a thematic project with real-world application (e.g., e-commerce, social media clone).</li>
+                      </ul>
+                  </div>
+              </div>
+          </section>
+          
+          <!-- Trainers Section -->
+          <section id="trainers" class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 card-hover">
+              <h2 class="text-2xl font-bold mb-6 flex items-center"><i data-lucide="graduation-cap" class="w-7 h-7 mr-3 text-amber-500"></i>Your Expert Trainers</h2>
+              <div class="space-y-8">
+                  <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                      <img src="https://pbs.twimg.com/profile_images/738570826291646464/EEH1StZS_400x400.jpg" alt="Dr. Lau Cher Han" class="rounded-full w-24 h-24 border-4 border-gray-200 object-cover flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/100x100/e2e8f0/64748b?text=Trainer';">
+                      <div>
+                          <h3 class="font-semibold text-xl text-center sm:text-left text-gray-800">Dr. Lau Cher Han</h3>
+                          <p class="text-gray-600 text-center sm:text-left">Chief Data Scientist, national AI advisor, and expert trainer in data science and application development.</p>
+                      </div>
+                  </div>
+                  <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                      <img src="https://www.kosmo.com.my/wp-content/uploads/2025/03/Warren_Leow.jpg123-1024x768.jpg" alt="Warren Leow" class="rounded-full w-24 h-24 border-4 border-gray-200 object-cover flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/100x100/e2e8f0/64748b?text=Trainer';">
+                      <div>
+                          <h3 class="font-semibold text-xl text-center sm:text-left text-gray-800">Warren Leow</h3>
+                          <p class="text-gray-600 text-center sm:text-left">Founder of Supern8n and an expert in scaling tech products from zero to one across multiple industries.</p>
+                      </div>
+                  </div>
+                  <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                      <img src="https://scontent.fkul10-1.fna.fbcdn.net/v/t39.30808-6/357769661_10160785443249901_4445119936146916340_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=IKxJ572dpDcQ7kNvwFZa7-H&_nc_oc=Adnqt9yXZ-XCFGi7Y2dMAAhTAvlpx2vZcZZiJ0S8d7LhUcDmbf-El7yFsBsG3CpWjkleLaeKuZrYEvl_sXCoUI4z&_nc_zt=23&_nc_ht=scontent.fkul10-1.fna&_nc_gid=yNYQ-MRmKQsKHyTLbCeUTA&oh=00_AfRiNK9HlxXUxuIZ22i4R_x-jnxcd9mQCxj0tWkhEofguA&oe=687D066E" alt="Marcus Chia" class="rounded-full w-24 h-24 border-4 border-gray-200 object-cover flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/100x100/e2e8f0/64748b?text=Trainer';">
+                      <div>
+                          <h3 class="font-semibold text-xl text-center sm:text-left text-gray-800">Marcus Chia</h3>
+                          <p class="text-gray-600 text-center sm:text-left">AI UI/UX designer and expert in helping organizations adopt AI for operational efficiency. Specialist in no-code/low-code AI solutions and practical applications for business processes.</p>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+          <!-- Testimonials Section -->
+          <section id="testimonials" class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 card-hover relative">
+            <i data-lucide="quote" class="absolute top-4 right-4 w-16 h-16 text-gray-100"></i>
+            <h2 class="text-2xl font-bold mb-6 flex items-center">What Our Alumni Are Saying</h2>
+            <div class="space-y-6">
+              <blockquote class="bg-gray-100 p-6 rounded-lg border-l-4 border-gray-300">
+                <p class="text-gray-600 italic mb-3">"I went from zero coding knowledge to launching my own web app in just a few days. The hands-on approach is incredible!"</p>
+                <cite class="font-semibold text-gray-700 not-italic">– Alex T., Founder</cite>
+              </blockquote>
+              <blockquote class="bg-gray-100 p-6 rounded-lg border-l-4 border-gray-300">
+                <p class="text-gray-600 italic mb-3">"The focus on product management and real-world best practices was a game-changer. This is more than just a coding course."</p>
+                <cite class="font-semibold text-gray-700 not-italic">– Sarah K., Product Manager</cite>
+              </blockquote>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- Sticky Sidebar -->
+        <aside class="lg:col-span-1 space-y-8 lg:sticky lg:top-24 self-start">
+          <div id="outcomes" class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 card-hover">
+              <h3 class="text-xl font-bold mb-4 flex items-center"><i data-lucide="rocket" class="w-6 h-6 mr-3 text-amber-500"></i>Learning Outcomes</h3>
+              <ul class="space-y-3 text-gray-600">
+                  <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-amber-500 mt-1 flex-shrink-0"></i><span>Build and launch 4-5 complete web & mobile applications.</span></li>
+                  <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-amber-500 mt-1 flex-shrink-0"></i><span>Master UI/UX, PRDs, and product management best practices.</span></li>
+                  <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-amber-500 mt-1 flex-shrink-0"></i><span>Integrate backends, databases, and payment gateways.</span></li>
+                  <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-amber-500 mt-1 flex-shrink-0"></i><span>Use Git and GitHub for professional version control.</span></li>
+                  <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-amber-500 mt-1 flex-shrink-0"></i><span>Deploy production-level projects with proper hosting.</span></li>
+                  <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-amber-500 mt-1 flex-shrink-0"></i><span>Implement security fundamentals and debugging techniques.</span></li>
+              </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 card-hover">
+              <h3 class="text-xl font-bold mb-4 flex items-center"><i data-lucide="building-2" class="w-6 h-6 mr-3 text-amber-500"></i>Benefits to Your Organization</h3>
+              <ul class="space-y-3 text-gray-600">
+                  <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-amber-500 mt-1 flex-shrink-0"></i><span>Accelerate product development and prototyping.</span></li>
+                  <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-amber-500 mt-1 flex-shrink-0"></i><span>Build in-house MVPs without high agency costs.</span></li>
+                  <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-amber-500 mt-1 flex-shrink-0"></i><span>Improve collaboration between technical and non-technical teams.</span></li>
+                  <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 mr-2 text-amber-500 mt-1 flex-shrink-0"></i><span>Upskill your workforce with production-ready coding skills.</span></li>
+              </ul>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Gallery Section -->
+      <section id="gallery" class="mt-20">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Glimpses from Our Workshops</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="overflow-hidden rounded-xl shadow-lg card-hover">
+                <img src="https://github.com/drhanlau/n8n-course/blob/main/501008480_1271616571636352_1045940269974980193_n.jpg?raw=true" alt="Past workshop photo 1" class="w-full h-full object-cover">
+            </div>
+            <div class="overflow-hidden rounded-xl shadow-lg card-hover">
+                <img src="https://github.com/drhanlau/n8n-course/blob/main/516791714_1309874321143910_2384036856029643188_n.jpg?raw=true" alt="Past workshop photo 2" class="w-full h-full object-cover">
+            </div>
+            <div class="overflow-hidden rounded-xl shadow-lg card-hover">
+                <img src="https://github.com/drhanlau/n8n-course/blob/main/501008480_1271616571636352_1045940269974980193_n.jpg?raw=true" alt="Past workshop photo 3" class="w-full h-full object-cover">
+            </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq" class="mt-20">
+        <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 card-hover">
+          <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Frequently Asked Questions</h2>
+          <div class="max-w-3xl mx-auto space-y-4" id="faq-accordion">
+
+            <!-- FAQ Item -->
+            <div class="border-b border-gray-200 py-4">
+              <button class="accordion-header w-full flex justify-between items-center text-left text-lg font-semibold text-gray-800 hover:text-amber-600 focus:outline-none">
+                <span>Do I need any coding experience?</span>
+                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform transform"></i>
+              </button>
+              <div class="accordion-content mt-2 text-gray-600">
+                <p>Absolutely not! This workshop is designed for beginners. We'll guide you step-by-step from the very basics to launching a full application. All you need is a passion for building and a willingness to learn.</p>
+              </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div class="border-b border-gray-200 py-4">
+              <button class="accordion-header w-full flex justify-between items-center text-left text-lg font-semibold text-gray-800 hover:text-amber-600 focus:outline-none">
+                <span>What technologies will we learn?</span>
+                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform transform"></i>
+              </button>
+              <div class="accordion-content mt-2 text-gray-600">
+                <p class="mb-2">We focus on a modern, in-demand tech stack and toolset:</p>
+                <ul class="list-disc list-inside space-y-1">
+                    <li><strong>Languages & Frameworks:</strong> React.js, HTML5, Tailwind CSS</li>
+                    <li><strong>Backend:</strong> Serverless Functions (e.g., Vercel, Firebase)</li>
+                    <li><strong>Version Control:</strong> Git & GitHub</li>
+                    <li><strong>IDEs & Tools:</strong> Cursor, Visual Studio Code, Lovable, Bolt</li>
+                    <li><strong>Design & Payments:</strong> Figma, Stripe API</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div class="border-b border-gray-200 py-4">
+              <button class="accordion-header w-full flex justify-between items-center text-left text-lg font-semibold text-gray-800 hover:text-amber-600 focus:outline-none">
+                <span>Will I have a portfolio after this course?</span>
+                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform transform"></i>
+              </button>
+              <div class="accordion-content mt-2 text-gray-600">
+                <p>Yes! You will leave with 4-5 fully functional, live projects hosted on the web. These projects will form the foundation of your professional portfolio, all tracked and managed on your own GitHub profile.</p>
+              </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div class="border-b border-gray-200 py-4">
+              <button class="accordion-header w-full flex justify-between items-center text-left text-lg font-semibold text-gray-800 hover:text-amber-600 focus:outline-none">
+                <span>Is this course HRDF claimable?</span>
+                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform transform"></i>
+              </button>
+              <div class="accordion-content mt-2 text-gray-600">
+                <p>Yes, this course is 100% HRDF claimable under the SBL-KHAS scheme. We will provide all necessary documentation upon registration to assist with your claim.</p>
+              </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div class="py-4">
+              <button class="accordion-header w-full flex justify-between items-center text-left text-lg font-semibold text-gray-800 hover:text-amber-600 focus:outline-none">
+                <span>What do I need to bring?</span>
+                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform transform"></i>
+              </button>
+              <div class="accordion-content mt-2 text-gray-600">
+                <p class="mb-2">Just bring your laptop, a charger, and your enthusiasm! All software and tools we use are cloud-based, so no prior installation is needed.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA / Register Section -->
+      <section id="register" class="mt-20 text-center bg-gray-800 text-white rounded-xl p-10 md:p-16 shadow-2xl bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+        <div class="relative z-10">
+          <h2 class="text-4xl font-extrabold mb-4">Ready to Build Your Big Idea?</h2>
+          <p class="text-lg text-gray-300 mb-2">RM3,500 HRDF / RM2,900 non-HRDF (+ SST)</p>
+          <p class="text-gray-400 mb-8">Includes training, certification, and 3 months of post-workshop support.</p>
+          <a href="https://forms.gle/PN7R1p8C5YD6sWABA" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-yellow text-gray-900 font-bold text-lg px-10 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+            Book Your Seat Now
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400">
+    <div class="container mx-auto px-6 py-8 text-center">
+      <p class="mb-4">Organized by <strong>theLead.io</strong></p>
+      <p>For inquiries: <a href="mailto:chelsea@thelead.io" class="text-amber-400 hover:text-amber-300">chelsea@thelead.io</a></p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/15557074708" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all transform hover:scale-110 z-50">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+        <path d="M16.604 13.444c-.27-.135-.636-.316-1.002-.497-.366-.181-.606-.271-.787-.271-.181 0-.362.09-.543.271l-.452.543c-.271.362-.543.632-.724.813-.181.181-.362.271-.632.271-.271 0-.543-.09-.724-.271-.181-.181-.9-1.084-2.168-2.348-1.267-1.267-2.167-2.078-2.348-2.168-.181-.181-.271-.452-.271-.724 0-.271.09-.543.271-.632.181-.181.452-.362.813-.724l.543-.452c.181-.181.271-.362.271-.543s-.09-.362-.271-.787c-.181-.366-.316-.732-.497-1.002-.181-.271-.362-.452-.632-.452h-.813c-.362 0-.724.181-1.002.543-.271.362-.452.724-.452 1.002 0 .362.181.724.452 1.18l.271.452c.813 1.446 2.078 2.979 3.794 4.512 1.715 1.533 3.069 2.709 4.512 3.794l.452.271c.452.271.813.452 1.18.452.271 0 .632-.181 1.002-.452.362-.271.543-.632.543-1.002v-.813c0-.271-.181-.452-.452-.632Z M12 2.04c-5.514 0-10 4.486-10 10s4.486 10 10 10 10-4.486 10-10-4.486-10-10-10Z"/>
+      </svg>
+  </a>
+
+  <script>
+    // Wait for the DOM to be fully loaded before running scripts
+    document.addEventListener('DOMContentLoaded', function () {
+      // Initialize Lucide icons first
+      lucide.createIcons();
+
+      // Mobile menu functionality
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (mobileMenuButton && mobileMenu) {
+        const navLinks = mobileMenu.querySelectorAll('a');
+
+        mobileMenuButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+      }
+
+      // Accordion functionality
+      const accordionHeaders = document.querySelectorAll('.accordion-header');
+      accordionHeaders.forEach(header => {
+          header.addEventListener('click', () => {
+              const content = header.nextElementSibling;
+              // Lucide replaces the <i> tag with an <svg> tag, so we select the svg.
+              const icon = header.querySelector('svg');
+
+              // Safety check in case elements are not found
+              if (!content || !icon) return;
+
+              const isOpening = !content.style.maxHeight;
+
+              // Optional: Close all other open accordions before opening the new one
+              document.querySelectorAll('.accordion-content').forEach(item => {
+                  if (item !== content) {
+                      item.style.maxHeight = null;
+                      const otherIcon = item.previousElementSibling.querySelector('svg');
+                      if (otherIcon) {
+                          otherIcon.classList.remove('rotate-180');
+                      }
+                  }
+              });
+
+              // Toggle the clicked accordion
+              if (isOpening) {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                  icon.classList.add('rotate-180');
+              } else {
+                  content.style.maxHeight = null;
+                  icon.classList.remove('rotate-180');
+              }
+          });
+      });
+    });
+  </script>
+
+</body>
+</html>
