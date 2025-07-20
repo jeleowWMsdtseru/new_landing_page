@@ -76,7 +76,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              What You'll Build & Learn
+              What You&apos;ll Build & Learn
             </h2>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto">
               Two intensive days of hands-on coding. Walk away with real AI applications and the skills to build more.
@@ -183,9 +183,9 @@ export default function Home() {
                   <p className="text-gray-400 text-sm">Frontend Developer</p>
                 </div>
               </div>
-              <p className="text-gray-300 mb-4">
-                "This workshop completely changed how I approach development. I built my first AI-powered app in just 2 days and launched it the following week!"
-              </p>
+                              <p className="text-gray-300 mb-4">
+                  &ldquo;This workshop completely changed how I approach development. I built my first AI-powered app in just 2 days and launched it the following week!&rdquo;
+                </p>
               <div className="flex text-yellow-400">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
@@ -206,9 +206,9 @@ export default function Home() {
                   <p className="text-gray-400 text-sm">Business Analyst</p>
                 </div>
               </div>
-              <p className="text-gray-300 mb-4">
-                "As a non-technical person, I was worried about keeping up. The instructors were amazing and I actually built a working AI tool for my company!"
-              </p>
+                              <p className="text-gray-300 mb-4">
+                  &ldquo;As a non-technical person, I was worried about keeping up. The instructors were amazing and I actually built a working AI tool for my company!&rdquo;
+                </p>
               <div className="flex text-yellow-400">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
@@ -229,9 +229,9 @@ export default function Home() {
                   <p className="text-gray-400 text-sm">Product Manager</p>
                 </div>
               </div>
-              <p className="text-gray-300 mb-4">
-                "The hands-on approach was perfect. No boring theory - just practical skills I could use immediately. Worth every ringgit!"
-              </p>
+                              <p className="text-gray-300 mb-4">
+                  &ldquo;The hands-on approach was perfect. No boring theory - just practical skills I could use immediately. Worth every ringgit!&rdquo;
+                </p>
               <div className="flex text-yellow-400">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
@@ -253,7 +253,7 @@ export default function Home() {
                 Frequently Asked Questions
               </h2>
               <p className="text-gray-300 text-lg">
-                Got questions? We've got answers.
+                Got questions? We&apos;ve got answers.
               </p>
             </div>
 
@@ -264,7 +264,7 @@ export default function Home() {
                   Do I need prior programming experience?
                 </h3>
                 <p className="text-gray-300">
-                  While basic programming knowledge is helpful, we accommodate beginners. Our curriculum starts with fundamentals and builds up gradually. We recommend basic familiarity with HTML/CSS, but it's not mandatory.
+                  While basic programming knowledge is helpful, we accommodate beginners. Our curriculum starts with fundamentals and builds up gradually. We recommend basic familiarity with HTML/CSS, but it&apos;s not mandatory.
                 </p>
               </div>
 
@@ -274,7 +274,7 @@ export default function Home() {
                   What should I bring to the workshop?
                 </h3>
                 <p className="text-gray-300">
-                  Bring your laptop with a modern web browser and ensure it's fully charged. We'll provide all software setup instructions before the workshop. A notebook for taking notes is also recommended.
+                  Bring your laptop with a modern web browser and ensure it&apos;s fully charged. We&apos;ll provide all software setup instructions before the workshop. A notebook for taking notes is also recommended.
                 </p>
               </div>
 
@@ -284,14 +284,14 @@ export default function Home() {
                   Is this workshop eligible for HRDF claims?
                 </h3>
                 <p className="text-gray-300">
-                  Yes! This workshop is HRDF claimable up to RM 1,000. We'll provide all necessary documentation for your claim submission. Most participants get their full workshop fee reimbursed.
+                  Yes! This workshop is HRDF claimable up to RM 1,000. We&apos;ll provide all necessary documentation for your claim submission. Most participants get their full workshop fee reimbursed.
                 </p>
               </div>
 
               {/* FAQ Item 4 */}
               <div className="bg-gray-900 rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-white mb-3">
-                  What if I can't attend the selected date?
+                  What if I can&apos;t attend the selected date?
                 </h3>
                 <p className="text-gray-300">
                   You can transfer your registration to another available date up to 7 days before the workshop. We also offer full refunds if you cancel at least 14 days in advance.
@@ -304,14 +304,14 @@ export default function Home() {
                   Will I get certification after completion?
                 </h3>
                 <p className="text-gray-300">
-                  Yes, you'll receive a digital certificate of completion that you can add to your LinkedIn profile. You'll also get lifetime access to all workshop materials and our private community.
+                  Yes, you&apos;ll receive a digital certificate of completion that you can add to your LinkedIn profile. You&apos;ll also get lifetime access to all workshop materials and our private community.
                 </p>
               </div>
 
               {/* FAQ Item 6 */}
               <div className="bg-gray-900 rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-white mb-3">
-                  What's included in the workshop fee?
+                  What&apos;s included in the workshop fee?
                 </h3>
                 <p className="text-gray-300">
                   The fee includes 2 days of intensive training, all workshop materials, lunch and refreshments, access to our private Discord community, and lifetime access to course resources and updates.
