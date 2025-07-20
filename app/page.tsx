@@ -73,6 +73,21 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+              
+              {/* Download Brochure Button */}
+              <div className="mb-8">
+                <a
+                  href="https://drive.google.com/file/d/1xQZhIFpf4SJxRF02jeM_D4u-lGGpTbsx/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center bg-secondary hover:bg-secondary/80 text-secondary-foreground font-medium py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105"
+                >
+                  <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                  Download Brochure
+                </a>
+              </div>
             </div>
 
             {/* Right Column - Registration Form */}
@@ -166,6 +181,105 @@ export default function Home() {
                   Deploy to production (Vercel/Netlify)
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Expert Trainers Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Learn from Industry Experts
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+              Our workshops are led by seasoned professionals who have built and scaled AI solutions across major industries. Get hands-on guidance from the best in the field.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Trainer 1 - Dr. Lau Cher Han */}
+            <div className="bg-card border border-border rounded-lg overflow-hidden shadow-lg">
+              <div className="aspect-square relative bg-muted">
+                <img
+                  src="https://pbs.twimg.com/profile_images/738570826291646464/EEH1StZS_400x400.jpg"
+                  alt="Dr. Lau Cher Han - Chief Data Scientist"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-card-foreground mb-2">Dr. Lau Cher Han</h3>
+                <p className="text-primary font-medium mb-3">Chief Data Scientist & National AI Advisor</p>
+                <p className="text-muted-foreground text-sm">
+                  Leading expert in data science and automation with extensive experience advising on national AI strategies. 
+                  Specializes in translating complex AI concepts into practical business solutions.
+                </p>
+              </div>
+            </div>
+
+            {/* Trainer 2 - Warren Leow */}
+            <div className="bg-card border border-border rounded-lg overflow-hidden shadow-lg">
+              <div className="aspect-square relative bg-muted">
+                <img
+                  src="https://www.kosmo.com.my/wp-content/uploads/2025/03/Warren_Leow.jpg123-1024x768.jpg"
+                  alt="Warren Leow - Founder of Supern8n"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-card-foreground mb-2">Warren Leow</h3>
+                <p className="text-primary font-medium mb-3">Founder of Supern8n, Co-founder of KAIN</p>
+                <p className="text-muted-foreground text-sm">
+                  Serial entrepreneur and advisor to MED4IRN with deep experience in scaling AI across industries. 
+                  Expert in building AI products from conception to market deployment.
+                </p>
+              </div>
+            </div>
+
+            {/* Trainer 3 - Edmund Hee */}
+            <div className="bg-card border border-border rounded-lg overflow-hidden shadow-lg">
+              <div className="aspect-square relative bg-muted">
+                <img
+                  src="https://thelead.io/wp-content/uploads/2020/08/edmund-crop.png"
+                  alt="Edmund Hee - CTO at Accio Technologies"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-card-foreground mb-2">Edmund Hee</h3>
+                <p className="text-primary font-medium mb-3">CTO at Accio Technologies</p>
+                <p className="text-muted-foreground text-sm">
+                  Former AI Officer at CIMB and Data Scientist at AirAsia. Brings extensive enterprise experience 
+                  in implementing AI solutions at scale across financial services and aviation industries.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Download Brochure Section */}
+          <div className="text-center mt-12">
+            <div className="bg-muted rounded-lg p-8 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                Want More Details?
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                Download our comprehensive workshop brochure for detailed curriculum, trainer profiles, and schedule information.
+              </p>
+              <a
+                href="https://drive.google.com/file/d/1xQZhIFpf4SJxRF02jeM_D4u-lGGpTbsx/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-primary-foreground font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
+              >
+                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+                Download Workshop Brochure
+              </a>
             </div>
           </div>
         </div>
