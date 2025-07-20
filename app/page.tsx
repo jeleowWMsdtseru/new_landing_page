@@ -252,6 +252,138 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Workshop Gallery Section */}
+      <section className="py-16 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Previous Workshop Highlights
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              See our participants in action, building real AI applications and collaborating with fellow developers.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {/* Workshop Photo 1 */}
+            <div className="bg-card border border-border rounded-lg overflow-hidden shadow-lg">
+              <div className="aspect-video relative">
+                <img
+                  src="https://github.com/drhanlau/n8n-course/blob/main/501008480_1271616571636352_1045940269974980193_n.jpg?raw=true"
+                  alt="Workshop participants collaborating on AI projects"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="font-semibold text-card-foreground mb-2">Hands-on Learning</h3>
+                <p className="text-muted-foreground text-sm">
+                  Participants building their first AI chatbot with real-time guidance from our expert instructors.
+                </p>
+              </div>
+            </div>
+
+            {/* Workshop Photo 2 */}
+            <div className="bg-card border border-border rounded-lg overflow-hidden shadow-lg">
+              <div className="aspect-video relative">
+                <img
+                  src="https://github.com/drhanlau/n8n-course/blob/main/516791714_1309874321143910_2384036856029643188_n.jpg?raw=true"
+                  alt="Workshop attendees working together on AI development"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="font-semibold text-card-foreground mb-2">Team Collaboration</h3>
+                <p className="text-muted-foreground text-sm">
+                  Developers from various backgrounds learning modern AI development techniques together.
+                </p>
+              </div>
+            </div>
+
+            {/* Workshop Photo 3 */}
+            <div className="bg-card border border-border rounded-lg overflow-hidden shadow-lg">
+              <div className="aspect-video relative">
+                <img
+                  src="https://raw.githubusercontent.com/drhanlau/n8n-course/refs/heads/main/photo-1552664730-d307ca884978.avif"
+                  alt="Interactive workshop session with live coding"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="font-semibold text-card-foreground mb-2">Live Coding Sessions</h3>
+                <p className="text-muted-foreground text-sm">
+                  Interactive sessions where participants deploy their AI applications to production.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trusted Companies Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              Trusted by Leading Organizations
+            </h2>
+            <p className="text-muted-foreground">
+              Professionals from these companies have enhanced their AI skills with our workshops
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 max-w-4xl mx-auto">
+            {/* Johor Corp */}
+            <div className="bg-card border border-border rounded-lg p-6 flex items-center justify-center min-h-[100px] w-[180px] transition-transform hover:scale-105">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQku905qBjCQ5SDj3lZve75sRjQcKTmpersqg&s"
+                alt="Johor Corporation"
+                className="max-w-full max-h-16 object-contain opacity-70 hover:opacity-100 transition-opacity"
+                loading="lazy"
+              />
+            </div>
+
+            {/* Sunway */}
+            <div className="bg-card border border-border rounded-lg p-6 flex items-center justify-center min-h-[100px] w-[180px] transition-transform hover:scale-105">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/76/Sunway_logo.png"
+                alt="Sunway Group"
+                className="max-w-full max-h-16 object-contain opacity-70 hover:opacity-100 transition-opacity"
+                loading="lazy"
+              />
+            </div>
+
+            {/* Softspace */}
+            <div className="bg-card border border-border rounded-lg p-6 flex items-center justify-center min-h-[100px] w-[180px] transition-transform hover:scale-105">
+              <img
+                src="https://www.trans-cosmos.co.jp/company/news/images/20220214.png"
+                alt="Softspace"
+                className="max-w-full max-h-16 object-contain opacity-70 hover:opacity-100 transition-opacity"
+                loading="lazy"
+              />
+            </div>
+
+            {/* Team Lewis */}
+            <div className="bg-card border border-border rounded-lg p-6 flex items-center justify-center min-h-[100px] w-[180px] transition-transform hover:scale-105">
+              <img
+                src="https://cdn.brandfetch.io/idOl_jw5Ee/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1728225821384"
+                alt="Team Lewis"
+                className="max-w-full max-h-16 object-contain opacity-70 hover:opacity-100 transition-opacity dark:invert"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div className="text-center mt-8">
+            <p className="text-muted-foreground text-sm">
+              Join professionals from Fortune 500 companies and innovative startups in mastering AI development
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
