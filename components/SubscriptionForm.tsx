@@ -163,24 +163,24 @@ export default function WorkshopRegistrationForm() {
   // Show success message
   if (success) {
     return (
-      <div className="bg-gray-800 p-8 rounded-lg shadow-xl">
+      <div className="bg-card border border-border p-8 rounded-lg shadow-xl">
         <div className="text-center">
           <div className="mb-4">
-            <svg className="mx-auto h-12 w-12 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 48 48">
+            <svg className="mx-auto h-12 w-12 text-success" fill="none" stroke="currentColor" viewBox="0 0 48 48">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-          <h2 className="text-2xl font-semibold text-white mb-4">
+          <h2 className="text-2xl font-semibold text-card-foreground mb-4">
             Registration Successful! 🎉
           </h2>
-          <p className="text-gray-300 mb-6">
+          <p className="text-muted-foreground mb-6">
             {isDevelopmentMode ? 
               '🔧 Demo mode: Your workshop registration was simulated! Check the browser console for details.' :
               'Thank you for registering! You\'ll receive a confirmation email with workshop details and payment instructions.'
             }
           </p>
-          <div className="bg-blue-900/50 border border-blue-600 rounded-lg p-4 mb-6">
-            <p className="text-blue-300 text-sm">
+          <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 mb-6">
+            <p className="text-primary text-sm">
               <strong>Next Steps:</strong><br />
               • Payment instructions will be sent via email<br />
               • Workshop materials will be provided on day 1<br />
@@ -189,7 +189,7 @@ export default function WorkshopRegistrationForm() {
           </div>
           <button
             onClick={() => setSuccess(false)}
-            className="text-blue-400 hover:text-blue-300 font-medium underline"
+            className="text-primary hover:text-primary/80 font-medium underline"
           >
             Register another participant
           </button>
@@ -199,29 +199,29 @@ export default function WorkshopRegistrationForm() {
   }
 
   return (
-    <div className="bg-gray-800 p-8 rounded-lg shadow-xl">
-      <h2 className="text-2xl font-semibold text-white mb-6">
+    <div className="bg-card border border-border p-8 rounded-lg shadow-xl">
+      <h2 className="text-2xl font-semibold text-card-foreground mb-6">
         Secure Your Spot
       </h2>
       
       {isDevelopmentMode && (
-        <div className="mb-4 p-4 bg-blue-900/50 border border-blue-600 rounded-lg">
-          <p className="text-blue-300 text-sm">
+        <div className="mb-4 p-4 bg-primary/10 border border-primary/20 rounded-lg">
+          <p className="text-primary text-sm">
             🔧 <strong>Development Mode:</strong> Workshop registrations are simulated. Set up Supabase credentials to enable real functionality.
           </p>
         </div>
       )}
       
       {error && (
-        <div className="mb-4 p-4 bg-red-900/50 border border-red-600 rounded-lg">
-          <p className="text-red-300 text-sm">{error}</p>
+        <div className="mb-4 p-4 bg-destructive/10 border border-destructive/20 rounded-lg">
+          <p className="text-destructive text-sm">{error}</p>
         </div>
       )}
 
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Name Input */}
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+          <label htmlFor="name" className="block text-sm font-medium text-muted-foreground mb-2">
             Full Name *
           </label>
           <input
@@ -231,14 +231,14 @@ export default function WorkshopRegistrationForm() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             disabled={loading}
-            className="w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none border-0 placeholder-gray-400 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full px-4 py-3 bg-input border border-border text-foreground rounded-lg focus:ring-2 focus:ring-ring focus:outline-none placeholder:text-muted-foreground disabled:opacity-50 disabled:cursor-not-allowed"
             placeholder="Enter your full name"
           />
         </div>
 
         {/* Email Input */}
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+          <label htmlFor="email" className="block text-sm font-medium text-muted-foreground mb-2">
             Email Address *
           </label>
           <input
@@ -248,14 +248,14 @@ export default function WorkshopRegistrationForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             disabled={loading}
-            className="w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none border-0 placeholder-gray-400 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full px-4 py-3 bg-input border border-border text-foreground rounded-lg focus:ring-2 focus:ring-ring focus:outline-none placeholder:text-muted-foreground disabled:opacity-50 disabled:cursor-not-allowed"
             placeholder="Enter your email"
           />
         </div>
 
         {/* Phone Input */}
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+          <label htmlFor="phone" className="block text-sm font-medium text-muted-foreground mb-2">
             Phone Number *
           </label>
           <input
@@ -265,14 +265,14 @@ export default function WorkshopRegistrationForm() {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             disabled={loading}
-            className="w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none border-0 placeholder-gray-400 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full px-4 py-3 bg-input border border-border text-foreground rounded-lg focus:ring-2 focus:ring-ring focus:outline-none placeholder:text-muted-foreground disabled:opacity-50 disabled:cursor-not-allowed"
             placeholder="Enter your phone number"
           />
         </div>
 
         {/* Company Input */}
         <div>
-          <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+          <label htmlFor="company" className="block text-sm font-medium text-muted-foreground mb-2">
             Company/Organization (Optional)
           </label>
           <input
@@ -282,14 +282,14 @@ export default function WorkshopRegistrationForm() {
             value={company}
             onChange={(e) => setCompany(e.target.value)}
             disabled={loading}
-            className="w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none border-0 placeholder-gray-400 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full px-4 py-3 bg-input border border-border text-foreground rounded-lg focus:ring-2 focus:ring-ring focus:outline-none placeholder:text-muted-foreground disabled:opacity-50 disabled:cursor-not-allowed"
             placeholder="Your company or organization"
           />
         </div>
 
         {/* Workshop Date Selection */}
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm font-medium text-muted-foreground mb-2">
             Select Workshop Date *
           </label>
           <div className="space-y-2">
@@ -302,14 +302,14 @@ export default function WorkshopRegistrationForm() {
                   checked={selectedDate === date.id}
                   onChange={(e) => setSelectedDate(e.target.value)}
                   disabled={loading || !date.available}
-                  className="mr-3 text-blue-600"
+                  className="mr-3 text-primary focus:ring-ring"
                 />
                 <div className="flex-1">
-                  <span className={`${date.available ? 'text-white' : 'text-gray-500'}`}>
+                  <span className={`${date.available ? 'text-foreground' : 'text-muted-foreground'}`}>
                     {date.label}
                   </span>
                   <span className={`ml-2 px-2 py-1 rounded text-xs ${
-                    date.slots === 'Available' ? 'bg-green-600 text-white' : 'bg-orange-600 text-white'
+                    date.slots === 'Available' ? 'bg-success text-success-foreground' : 'bg-warning text-warning-foreground'
                   }`}>
                     {date.slots}
                   </span>
@@ -321,7 +321,7 @@ export default function WorkshopRegistrationForm() {
 
         {/* Experience Level */}
         <div>
-          <label htmlFor="experience" className="block text-sm font-medium text-gray-300 mb-2">
+          <label htmlFor="experience" className="block text-sm font-medium text-muted-foreground mb-2">
             Programming Experience *
           </label>
           <select
@@ -330,7 +330,7 @@ export default function WorkshopRegistrationForm() {
             value={experience}
             onChange={(e) => setExperience(e.target.value)}
             disabled={loading}
-            className="w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none border-0 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full px-4 py-3 bg-input border border-border text-foreground rounded-lg focus:ring-2 focus:ring-ring focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <option value="">Select your experience level</option>
             {experienceLevels.map((level) => (
@@ -350,9 +350,9 @@ export default function WorkshopRegistrationForm() {
             checked={hrdfClaim}
             onChange={(e) => setHrdfClaim(e.target.checked)}
             disabled={loading}
-            className="mt-1 h-4 w-4 text-blue-600 bg-gray-700 border-gray-600 rounded focus:ring-blue-500 focus:ring-2 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="mt-1 h-4 w-4 text-primary bg-input border border-border rounded focus:ring-ring focus:ring-2 disabled:opacity-50 disabled:cursor-not-allowed"
           />
-          <label htmlFor="hrdf" className="text-sm text-gray-300 leading-5">
+          <label htmlFor="hrdf" className="text-sm text-muted-foreground leading-5">
             I want to claim this workshop under HRDF (Human Resources Development Fund)
           </label>
         </div>
@@ -366,9 +366,9 @@ export default function WorkshopRegistrationForm() {
             checked={agreed}
             onChange={(e) => setAgreed(e.target.checked)}
             disabled={loading}
-            className="mt-1 h-4 w-4 text-blue-600 bg-gray-700 border-gray-600 rounded focus:ring-blue-500 focus:ring-2 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="mt-1 h-4 w-4 text-primary bg-input border border-border rounded focus:ring-ring focus:ring-2 disabled:opacity-50 disabled:cursor-not-allowed"
           />
-          <label htmlFor="terms" className="text-sm text-gray-300 leading-5">
+          <label htmlFor="terms" className="text-sm text-muted-foreground leading-5">
             I agree to the terms and conditions and confirm my workshop registration
           </label>
         </div>
@@ -377,7 +377,7 @@ export default function WorkshopRegistrationForm() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-800 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+          className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-primary-foreground font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
         >
           {loading ? 'Securing Your Spot...' : 'Register for Workshop'}
         </button>
